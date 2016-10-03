@@ -65,15 +65,22 @@
     .social-vk,
     .social-github,
     .social-in {
-      width: 32px;
-      height: 24px;
       fill: rgba(#ffffff, 0.5);
       &:hover {
         fill: #ffffff;
       }
     }
     .social-vk {
-      width: 36px;
+      width: 32px;
+      height: 18px;
+    }
+    .social-github {
+      width: 26px;
+      height: 22px;
+    }
+    .social-in {
+      width: 26px;
+      height: 22px;
     }
   }
 }

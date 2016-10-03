@@ -27,8 +27,18 @@
   z-index: 1;
   background-image: url('/assets/img/bg.svg');
   background-repeat: no-repeat;
-  background-size: 101%;
-  background-position: left bottom;
+  background-position: bottom;
+  .header__arrow-down {
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+    height: 18px;
+    &-icon {
+      width: 30px;
+      height: 18px;
+      fill: rgba(#ffffff, 0.7)
+    }
+  }
 }
 
 .header__nav-social {
@@ -45,15 +55,22 @@
    .social-vk,
    .social-github,
    .social-in {
-     width: 32px;
-     height: 24px;
      fill: #ffffff;
      &:hover {
        fill: $forest-green;
      }
    }
    .social-vk {
-     width: 36px;
+     width: 32px;
+     height: 18px;
+   }
+   .social-github {
+     width: 26px;
+     height: 22px;
+   }
+   .social-in {
+     width: 26px;
+     height: 22px;
    }
  }
 }
@@ -71,6 +88,7 @@
 
 .header__middle-wrapper {
   padding-top: 118px;
+  margin-bottom: 100px;
 }
 
 .header__middle {
