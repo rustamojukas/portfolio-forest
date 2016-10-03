@@ -1,0 +1,22 @@
+/**
+ * Layout styles
+ */
+ .page-wrapper {
+   height: 100%;
+   margin: 0 auto;
+ }
+
+ .page {
+   min-height: 100%;
+ }
+
+ .page:after {
+   content: '';
+   display: block;
+   height: 185px;
+ }
+
+.footer-wrapper {
+  height: 185px;
+  margin-top: -185px;
+}
