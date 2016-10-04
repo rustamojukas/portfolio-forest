@@ -1,7 +1,7 @@
 /**
  * Index page styles
  */
- .main-wrapper {
+.index-page {
   height: 100%;
   min-height: 700px;
   background-image: url('/assets/img/1200x789-header-bg.png');
@@ -11,120 +11,134 @@
   position: relative;
   &::before {
     content: "";
-    background: linear-gradient(#000000 10%, transparent 100%);
+    background: linear-gradient(top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.33) 10%,rgba(0,0,0,0) 30%);
     width: 100%;
-    height: 290px;
+    height: 100%;
     position: absolute;
-    opacity: 0.33;
+    opacity: 0.67;
     left: 0;
     top: 0;
   }
   &::after {
     content: "";
-    background: linear-gradient(to top, #000000 10%, transparent 100%);
+    background: linear-gradient(top, rgba(0,0,0,0) 90%,rgba(0,0,0,0.55) 100%);
     width: 100%;
-    height: 290px;
+    height: 100%;
     position: absolute;
     opacity: 0.2;
     left: 0;
     bottom: 0;
   }
- }
+}
 
- .main {
-   position: relative;
-   width: 100%;
-   height: 100%;
-   z-index: 1;
-   .welcome-wrapper {
-     width: 380px;
-     position: absolute;
-     top: 120px;
-     left: 50%;
-     margin-left: -190px;
-     background-color: rgba(#122620, 0.6);
-     border-bottom-left-radius: 6px;
-     border-bottom-right-radius: 6px;
-   }
+.welcome-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
 
-   .welcome {
-     padding-top: 40px;
-     text-align: center;
-     color: #ffffff;
-   }
+.authorisation-wrapper {
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 35px;
+}
 
-   .welcome__info-user-image{
-     width: 142px;
-     height: 142px;
-     position: relative;
-     border-radius: 50%;
-     overflow: hidden;
-     margin: 0 auto;
-     margin-bottom: 30px;
+.login-button {
+  color: #ffffff;
+  display: inline-block;
+  padding: 0 28px;
+  line-height: 44px;
+  border: 1px solid #ffffff;
+  border-radius: 22px;
+}
 
-     img{
-       max-width: 142px;
-       display: block;
-       position: absolute;
-       top: -10px;
-     }
+.welcome__user-card {
+  width: 380px;
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(#122620, 0.6);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
 
-   }
+.user-card__user-image{
+  width: 142px;
+  height: 142px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 30px;
 
-   .welcome__info-user-name {
-     font-family: 'RobotoMedium', sans-serif;
-     font-size: 35px;
-     margin-bottom: 7px;
-   }
+  .user-card__user-image-file{
+    max-width: 200px;
+    display: block;
+    position: absolute;
+    top: -22px;
+    left: -38px;
+  }
+}
 
-   .welcome__info-description {
-     font-family: 'RobotoRegular', sans-serif;
-     font-size: 16px;
-     margin-bottom: 30px;
-   }
- }
+.user-card__user-name {
+  font-family: 'RobotoMedium', sans-serif;
+  font-size: 35px;
+  margin-bottom: 7px;
+}
 
- .welcome__nav-social{
-   padding-bottom: 40px;
- }
+.user-card__description {
+  font-family: 'RobotoRegular', sans-serif;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
 
- .welcome__nav-social-item {
+.user-card__social{
+  margin-bottom: 40px;
+}
+
+.user-card__social-item,
+.social-links__item {
   display: inline-block;
   margin-right: 20px;
   &:last-child{
     margin-right: 0;
   }
-  .social-link {
-    font-size: 0;
-    .social-vk,
-    .social-github,
-    .social-in {
-      fill: #ffffff;
-      &:hover {
-        fill: $forest-green;
-      }
-    }
-    .social-vk {
-      width: 32px;
-      height: 18px;
-    }
-    .social-github {
-      width: 26px;
-      height: 22px;
-    }
-    .social-in {
-      width: 26px;
-      height: 22px;
+}
+
+.user-card__social-item-link,
+.social-links__item-link {
+  font-size: 0;
+  .social {
+    fill: #ffffff;
+    &:hover {
+      fill: $forest-green;
     }
   }
- }
 
-.welcome__nav {
+  .icon-vk {
+    width: 32px;
+    height: 18px;
+  }
+
+  .icon-github {
+    width: 26px;
+    height: 22px;
+  }
+
+  .icon-in {
+    width: 26px;
+    height: 22px;
+  }
+}
+
+.user-card__nav {
   display: table;
   width: 100%;
 }
 
-.welcome__nav-item {
+.user-card__nav-item {
   position: relative;
   display: table-cell;
   background-color: $forest-green-light;
@@ -159,25 +173,13 @@
   }
 }
 
-.main__footer {
+.index-page__footer {
   position: absolute;
   bottom: 40px;
   color: #ffffff;
   width: 100%;
 }
 
-.main__footer-copyright {
+.index-page__footer-copyright {
   text-align: center;
-}
-
-.login-button {
-  color: #ffffff;
-  display: block;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 0 28px;
-  line-height: 44px;
-  border: 1px solid #ffffff;
-  border-radius: 22px;
 }

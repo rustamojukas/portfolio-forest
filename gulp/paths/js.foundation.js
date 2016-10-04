@@ -1,6 +1,5 @@
 'use strict';
 
 module.exports = [
-  './bower_components/jquery/dist/jquery.min.js',
-  './source/js/snazzy-maps.js'
+  './bower_components/jquery/dist/jquery.min.js'
 ];
