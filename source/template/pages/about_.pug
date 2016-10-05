@@ -6,17 +6,8 @@ block variables
 block content
   .page-wrapper
     .page
-      .background-wrapper.page__dark-top
-        include ../common/_header
-      .content
-        svg(class="triangle" viewBox="0 0 1000 86" preserveAspectRatio="none")
-          polygon(class="triangle__left-side" points="0,0 0,86 500.8,86 500,84" fill="none")
-          polygon(class="triangle__right-side" points="1000,00 1000,86 500,86 500,84" fill="none")
-        .about-content__left
-          .about-content__left-title
-            +icon('about_header')
-            h2.about-title Обо мне
-        .about-content__right kjjoijojojojojoiiiiiiiiii
+      include ../common/_header_
+      .content content
       .map-wrapper
         #map
           script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJA3rp4tgCmTaJoODxPmVaCsT2mQbMCb8")

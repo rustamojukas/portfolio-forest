@@ -9,26 +9,28 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  &::before {
-    content: "";
-    background: linear-gradient(top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.33) 10%,rgba(0,0,0,0) 30%);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0.67;
-    left: 0;
-    top: 0;
-  }
-  &::after {
-    content: "";
-    background: linear-gradient(top, rgba(0,0,0,0) 90%,rgba(0,0,0,0.55) 100%);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0.2;
-    left: 0;
-    bottom: 0;
-  }
+}
+
+.page__dark-top::before {
+  content: "";
+  background: linear-gradient(top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.33) 10%,rgba(0,0,0,0) 30%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.67;
+  left: 0;
+  top: 0;
+}
+
+.page__dark-bottom::after {
+  content: "";
+  background: linear-gradient(top, rgba(0,0,0,0) 90%,rgba(0,0,0,0.55) 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.2;
+  left: 0;
+  bottom: 0;
 }
 
 .welcome-wrapper {
@@ -36,6 +38,10 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+.welcome {
+  height: 100%;
 }
 
 .authorisation-wrapper {
@@ -53,15 +59,20 @@
   border-radius: 22px;
 }
 
-.welcome__user-card {
+.welcome__user-card-wrapper {
   width: 380px;
   margin: 0 auto;
+}
+
+.welcome__user-card {
+  width: 100%;
   padding-top: 40px;
   text-align: center;
   color: #ffffff;
+}
+
+.welcome__user-card-front {
   background-color: rgba(#122620, 0.6);
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
 }
 
 .user-card__user-image{
@@ -114,6 +125,12 @@
     fill: #ffffff;
     &:hover {
       fill: $forest-green;
+    }
+    &--footer-top {
+      fill: rgba(#ffffff, 0.5);
+      &:hover {
+        fill: #ffffff;
+      }
     }
   }
 
@@ -173,11 +190,13 @@
   }
 }
 
+
+
 .index-page__footer {
-  position: absolute;
-  bottom: 40px;
   color: #ffffff;
   width: 100%;
+  position: absolute;
+  bottom: 40px;
 }
 
 .index-page__footer-copyright {
