@@ -6,6 +6,17 @@ block variables
 block content
   .page-wrapper
     .page
-      include ../common/_header_
-      .content content
+      .background-wrapper.page__dark-top
+        include ../common/_header
+        svg(class="triangle triangle-works-page" viewBox="0 0 1000 86" preserveAspectRatio="none")
+          polygon(class="triangle__left-side" points="0,0 0,86 500.8,86 500,84" fill="none")
+          polygon(class="triangle__right-side" points="1000,00 1000,86 500,86 500,84" fill="none")
+      .content
+        .works-content__title-wrapper
+          h1.works-title.upper-text Мои работы
+            +icon('works_header')
+            .works-content__left-wrapper
+              .works-content__left
+            .works-content__right-wrapper
+              .works-content__right
     include ../common/_footer
