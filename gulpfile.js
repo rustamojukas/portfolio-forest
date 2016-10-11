@@ -35,6 +35,7 @@ $.gulp.task('default', $.gulp.series(
     'pug'
   ),
   $.gulp.parallel(
+    'copy:favicon',
     'copy:image',
     'copy:fonts',
     'js:plugins:copy'

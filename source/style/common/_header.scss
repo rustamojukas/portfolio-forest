@@ -27,11 +27,39 @@
   }
 }
 
-.about-page-welcome__user-card-wrapper {
-  margin-bottom: 130px;
-  .about-page-user-card__description {
-    margin-bottom: 0;
+.user-info {
+  width: 100%;
+  padding-top: 38px;
+  margin-bottom: 134px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.user-info__user-image{
+  width: 142px;
+  height: 142px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 21px;
+
+  .user-info__user-image-file{
+    max-width: 200px;
+    display: block;
+    position: absolute;
+    top: -22px;
+    left: -38px;
   }
+}
+
+.user-info__user-name {
+  font-size: 35px;
+  margin-bottom: 6px;
+}
+
+.user-info__description {
+  font-size: 16px;
 }
 
 .header__arrow-down {

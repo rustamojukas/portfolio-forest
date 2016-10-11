@@ -3,21 +3,21 @@
     .top-menu-wrapper
       ul.top-menu__social-links.social-links
         li.social-links__item
-          a(href="#", class="social-links__item-link") vk.com
+          a(href="https://vk.com/", class="social-links__item-link", target="_blank") vk.com
             +icon('vk', 'social')
         li.social-links__item
-          a(href="#", class="social-links__item-link") github.com
+          a(href="https://github.com/rustamojukas/", class="social-links__item-link", target="_blank") github.com
             +icon('github', 'social')
         li.social-links__item
-          a(href="#", class="social-links__item-link") in
+          a(href="https://www.linkedin.com/", class="social-links__item-link", target="_blank") linkedin.com
             +icon('in', 'social')
       nav.top-menu
         +icon('hamburger', 'menu-icon')
-    .welcome__user-card-wrapper.about-page-welcome__user-card-wrapper
-      .welcome__user-card
-        .user-card__user-image
-          img.user-card__user-image-file(src="/assets/img/my-image.png", alt="Rustam Ojukas")
-        h1.user-card__user-name Рустам Оюкас
-        h2.user-card__description.about-page-user-card__description Личный сайт вэб разработчика
+    .user-info-wrapper
+      .user-info
+        .user-info__user-image
+          img.user-info__user-image-file(src="/assets/img/my-image.png", alt="Rustam Ojukas")
+        h1.user-info__user-name Рустам Оюкас
+        h2.user-info__description.about-page-user-card__description Личный сайт вэб разработчика
     a(href="#" class="header__arrow-down")
       +icon('arrow_down', 'header__arrow-down-icon')

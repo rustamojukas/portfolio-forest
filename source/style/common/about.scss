@@ -36,19 +36,19 @@
 
 .about-content__left {
   float: right;
-  margin-right: 32px;
+  margin-right: 78px;
 }
 
 .about-content__right {
-  margin-left: 32px;
-  padding-top: 18px;
+  margin-left: 40px;
+  padding-top: 10px;
 }
 
 .icon-about_header {
   position: absolute;
-  top: -28px;
-  left: 0;
-  width: 100%;
+  top: -32px;
+  left: 42px;
+  width: 360px;
   height: 120px;
   z-index: -1;
   fill: rgba(#93c42e, 0.1);
@@ -64,6 +64,7 @@
     font-family: 'SansusWebissimoRegular', sans-serif;
     font-size: 63px;
     position: relative;
+    margin-top: -4px;
     line-height: 1.5;
     color: $forest-grey;
     &:after {
@@ -71,7 +72,7 @@
       width: 88px;
       height: 3px;
       position: absolute;
-      bottom: 0;
+      bottom: 3px;
       left: 50%;
       margin-left: -44px;
       background-color: $forest-grey;
@@ -110,17 +111,21 @@
   height: 390px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 42px;
+  margin-bottom: 30px;
   .about-content__user-image-file{
     width: 100%;
     position: absolute;
   }
 }
 
+.about-content__user-title {
+  margin-bottom: 28px;
+}
+
 .about-content__user-text {
   margin-bottom: 40px;
   p {
-    margin-bottom: 18px;
+    margin-bottom: 32px;
     line-height: 1.5;
   }
 }
@@ -128,7 +133,7 @@
 .about-title-h2 {
   position: relative;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
   line-height: 1.25;
   font-family: 'SansusWebissimoRegular', sans-serif;
   font-size: 35px;
@@ -138,7 +143,7 @@
     width: 88px;
     height: 3px;
     position: absolute;
-    bottom: -14px;
+    bottom: -12px;
     left: 50%;
     margin-left: -44px;
     background-color: $forest-grey-light;
@@ -146,7 +151,7 @@
 }
 
 .about-user__description {
-  margin-bottom: 52px;
+  margin-bottom: 56px;
 }
 
 .skills-wrapper {
@@ -160,7 +165,7 @@
 }
 
 .about-content__skills-list {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .about-content__skills-list-item {
