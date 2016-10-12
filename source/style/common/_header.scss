@@ -66,14 +66,17 @@
   display: block;
   width: 27px;
   margin: 0 auto -44px;
+  .header__arrow-down-icon {
+    width: 27px;
+    height: 16px;
+    fill: rgba(#ffffff, 0.7)
+  }
+  &:hover {
+    .header__arrow-down-icon {
+      fill: #ffffff;
+    }
+  }
 }
-
-.header__arrow-down-icon {
-  width: 27px;
-  height: 16px;
-  fill: rgba(#ffffff, 0.7)
-}
-
 .triangle {
   position: relative;
   bottom: -4px;

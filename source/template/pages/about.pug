@@ -96,17 +96,22 @@ block content
           script(src='/assets/js/plugins/snazzy/snazzy-maps.js')
         .contacts-block
           h2.contacts-block__title.upper-text Контакты
-          .contacts-block_item
-            +icon('skype','contact-skype')
-            |r.ojukas
-          .contacts-block_item
-            +icon('envelope2','contact-email')
-            |rustam.ojukas@gmail.com
-          .contacts-block_item
-            +icon('phone2','contact-phone')
-            |+372534980112
-          .contacts-block_item
-            +icon('map_marker','contact-address')
-            |Koidutähe tee 56
+          ul.contacts-block-list
+            li.contacts-block-list__item
+              a(href="#", class="contacts-block-list__item-link")
+                +icon('skype','contact-skype')
+                span.contact-text r.ojukas
+            li.contacts-block-list__item
+              a(href="#", class="contacts-block-list__item-link")
+                +icon('envelope2','contact-email')
+                span.contact-text rustam.ojukas@gmail.com
+            li.contacts-block-list__item
+              a(href="#", class="contacts-block-list__item-link")
+                +icon('phone2','contact-phone')
+                span.contact-text +372534980112
+            li.contacts-block-list__item
+              a(href="#", class="contacts-block-list__item-link")
+                +icon('map_marker','contact-address')
+                span.contact-text Koidutähe tee 56
           +icon('map_marker','marker')
     include ../common/_footer
