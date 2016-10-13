@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-  - var title = 'Home page'
+  - var title = 'ГЛАВНАЯ'
 
 block content
   .page-wrapper
@@ -11,28 +11,46 @@ block content
           .authorisation-wrapper
             a(href="#" class="login-button") Авторизоваться
           .welcome__user-card-wrapper
-            .welcome__user-card.welcome__user-card-front
-              .user-card__user-image
-                img.user-card__user-image-file(src="/assets/img/my-image.png", alt="Rustam Ojukas")
-              h1.user-card__user-name Рустам Оюкас
-              h2.user-card__description Личный сайт вэб разработчика
-              ul.user-card__social.social-links
-                li.user-card__social-item.social-links__item
-                  a(href="https://vk.com/", class="user-card__social-item-link social-links__item-link", target="_blank") vk.com
-                    +icon('vk', 'social')
-                li.user-card__social-item.social-links__item
-                  a(href="https://github.com/rustamojukas/", class="user-card__social-item-link social-links__item-link", target="_blank") github.com
-                    +icon('github', 'social')
-                li.user-card__social-item.social-links__item
-                  a(href="https://www.linkedin.com/", class="user-card__social-item-link social-links__item-link", target="_blank") linkedin.com
-                    +icon('in', 'social')
-              .user-card__nav-wrapper
-                ul.user-card__nav
-                  li.user-card__nav-item
-                    a(href="works.html", class="link") Мои работы
-                  li.user-card__nav-item
-                    a(href="about.html", class="link") Обо мне
-                  li.user-card__nav-item
-                    a(href="blog.html", class="link") Блог
+            .welcome__user-card
+              .welcome__user-card-front
+                .user-card__user-image
+                  img.user-card__user-image-file(src="/assets/img/my-image.png", alt="Rustam Ojukas")
+                h1.user-card__user-name Рустам Оюкас
+                h2.user-card__description Личный сайт вэб разработчика
+                ul.user-card__social.social-links
+                  li.user-card__social-item.social-links__item
+                    a(href="https://vk.com/", class="user-card__social-item-link social-links__item-link", target="_blank") vk.com
+                      +icon('vk', 'social')
+                  li.user-card__social-item.social-links__item
+                    a(href="https://github.com/rustamojukas/", class="user-card__social-item-link social-links__item-link", target="_blank") github.com
+                      +icon('github', 'social')
+                  li.user-card__social-item.social-links__item
+                    a(href="https://www.linkedin.com/", class="user-card__social-item-link social-links__item-link", target="_blank") linkedin.com
+                      +icon('in', 'social')
+                .user-card__nav-wrapper
+                  ul.user-card__nav
+                    li.user-card__nav-item
+                      a(href="works.html", class="link") Мои работы
+                    li.user-card__nav-item
+                      a(href="about.html", class="link") Обо мне
+                    li.user-card__nav-item
+                      a(href="blog.html", class="link") Блог
+              .welcome__user-card-back
+                .login-title
+                  h1.login-title-text.upper-text Авторизируйтесь
+                form.login-form
+                  .user-login-name-wrapper
+                    label
+                      +icon('login')
+                    input.login-form_input(type="text", name="user-login-name" , placeholder="Логин")
+                  .user-password-wrapper
+                    +icon('password')
+                    input.login-form_input(type="password", name="user-password", placeholder="Пароль")
+                .user-card__nav-wrapper
+                  ul.user-card__nav
+                    li.user-card__nav-item
+                      a(href="works.html", class="link") На главную
+                    li.user-card__nav-item
+                      a(href="about.html", class="link") Войти
       .index-page__footer
         .index-page__footer-copyright &copy Rustam Ojukas | Создоно с любовью в LoftSchool | 2016
