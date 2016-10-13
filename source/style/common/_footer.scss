@@ -5,7 +5,6 @@
 .footer-top {
   height: 147px;
   background-color: rgba($forest-grey,0.85);
-  line-height: 1.75;
   @extend %clearfix;
 }
 
@@ -18,6 +17,7 @@
   padding-left: 28px;
   position: relative;
   padding-top: 24px;
+  line-height: 1.5;
   &:before {
     content: "";
     position: absolute;
@@ -42,13 +42,13 @@
 .footer-top__middle-nav {
   display: table;
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .footer-top__middle-nav-item {
   display: table-cell;
   .link {
-    font-family: 'RobotoMedium', sans-serif;
+    font-family: 'RobotoRegular', sans-serif;
     color: #ffffff;
     display: block;
   }
@@ -60,6 +60,7 @@
   &_quot-autor {
     font-family: 'RobotoBoldItalic', sans-serif;
     display: block;
+    margin-top: 8px
   }
 }
 

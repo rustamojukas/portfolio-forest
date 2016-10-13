@@ -18,13 +18,25 @@
 
 .top-menu {
   float: right;
-  margin-top: 30px;
+  margin-top: 34px;
   margin-right: 28px;
   .menu-icon {
     width: 42px;
     height: 36px;
     fill: #ffffff;
   }
+}
+
+.user-info-wrapper {
+  position: relative;
+}
+
+.icon-portfolio_header {
+  height: 100%;
+  width: 100%;
+  fill: rgba(#ffffff, 0.12);
+  position: absolute;
+  z-index: -1;
 }
 
 .user-info {
