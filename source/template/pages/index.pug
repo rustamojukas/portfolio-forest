@@ -9,7 +9,7 @@ block content
       .welcome-wrapper
         section.welcome
           .authorisation-wrapper
-            a(href="#" class="login-button") Авторизоваться
+            a(class="login-button") Авторизоваться
           .welcome__user-card-wrapper
             .welcome__user-card
               .welcome__user-card-front
@@ -27,30 +27,40 @@ block content
                   li.user-card__social-item.social-links__item
                     a(href="https://www.linkedin.com/", class="user-card__social-item-link social-links__item-link", target="_blank") linkedin.com
                       +icon('in', 'social')
-                .user-card__nav-wrapper
-                  ul.user-card__nav
-                    li.user-card__nav-item
+                .user-card-front__nav-wrapper
+                  ul.user-card-front__nav
+                    li.user-card-front__nav-item
                       a(href="works.html", class="link") Мои работы
-                    li.user-card__nav-item
+                    li.user-card-front__nav-item
                       a(href="about.html", class="link") Обо мне
-                    li.user-card__nav-item
+                    li.user-card-front__nav-item
                       a(href="blog.html", class="link") Блог
               .welcome__user-card-back
                 .login-title
                   h1.login-title-text.upper-text Авторизируйтесь
                 form.login-form
-                  .user-login-name-wrapper
-                    label
+                  .login-form__user-login-name-wrapper
+                    input.login-form__input(id="user-login-name" type="text", name="user-login-name" , placeholder="Логин")
+                    label.login-form__input-label(for="user-login-name").login-form__icon
                       +icon('login')
-                    input.login-form_input(type="text", name="user-login-name" , placeholder="Логин")
-                  .user-password-wrapper
-                    +icon('password')
-                    input.login-form_input(type="password", name="user-password", placeholder="Пароль")
-                .user-card__nav-wrapper
-                  ul.user-card__nav
-                    li.user-card__nav-item
-                      a(href="works.html", class="link") На главную
-                    li.user-card__nav-item
-                      a(href="about.html", class="link") Войти
+                  .login-form__user-password-wrapper
+                    input.login-form__input(id="user-password" type="password", name="user-password", placeholder="Пароль")
+                    label.login-form__input-label(for="user-password").login-form__icon
+                      +icon('password')
+                  .login-form__user-check-wrapper
+                    input.login-form__user-check(type="checkbox", id="user-check")
+                    label.login-form__user-check-label(for="user-check") Я человек
+                  h2.login-form__user-question Вы точно не робот?
+                  .login-form__user-radio-wrapper
+                    input.login-form__user-radio(type="radio", id="user-radio-yes", name="user-question-ansver", value="yes")
+                    label.login-form__user-radio-label(for="user-radio-yes") Да
+                    input.login-form__user-radio(type="radio", id="user-radio-no", name="user-question-ansver", value="no")
+                    label.login-form__user-radio-label(for="user-radio-no") Не уверен
+                .user-card-back__nav-wrapper
+                  ul.user-card-back__nav
+                    li.user-card-back__nav-item.home
+                      a(class="link") На главную
+                    li.user-card-back__nav-item.enter
+                      a(class="link") Войти
       .index-page__footer
         .index-page__footer-copyright &copy Rustam Ojukas | Создоно с любовью в LoftSchool | 2016

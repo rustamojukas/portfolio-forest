@@ -46,6 +46,7 @@
 
 .authorisation-wrapper {
   text-align: right;
+  height: 86px;
   padding: 20px;
   margin-bottom: 35px;
 }
@@ -77,7 +78,6 @@
   color: #ffffff;
 }
 
-.welcome__user-card-wrapper:hover,
 .flipped {
   .welcome__user-card {
    transform: rotateY(180deg);
@@ -120,13 +120,188 @@
   }
 }
 
-.login-form_input {
-  width: 340px;
+.login-form__user-login-name-wrapper,
+.login-form__user-password-wrapper {
+  display: inline-block;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.login-form__icon {
+  width: 45px;
+  height: 45px;
+  padding-top: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 22px 0 0 22px;
+  background-color: $login-form-icon-background;
+  fill: $login-form-icon-color;
+  .icon-login {
+    width: 15px;
+    height: 16px;
+  }
+  .icon-password {
+    width: 18px;
+    height: 16px;
+  }
+}
+
+.login-form__input {
+  width: 295px;
   border: 0;
   height: 45px;
-  border-radius: 22px;
-  margin: 0 auto 20px;
-  padding-left: 45px;
+  border-radius: 0 22px 22px 0;
+  margin-left: 45px;
+  padding-left: 19px;
+  color: rgba($forest-grey, 0.5);
+  &:focus {
+    outline: none;
+    color: $forest-grey;
+    border: 1px solid $forest-green;
+    + .login-form__input-label {
+      fill: $forest-green;
+    }
+  }
+}
+
+.login-form__user-check-wrapper {
+  margin: 0 auto 17px;
+  line-height: 20px;
+}
+
+.login-form__user-check {
+  display: none;
+}
+
+.login-form__user-check-label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  color: $form-elemets-text-color;
+}
+
+.login-form__user-check-label:before {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+}
+
+.login-form__user-check:checked + .login-form__user-check-label:before {
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  font-size: 13px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 20px;
+  border: 0;
+  background-color: $forest-green-light;
+  border-color: $forest-green-light;
+}
+
+.login-form__user-question {
+  font-family: 'RobotoBold', sans-serif;
+  font-size: 16px;
+  color: $form-elemets-text-color;
+  margin-bottom: 11px;
+}
+.login-form__user-radio-wrapper {
+  margin-bottom: 40px;
+}
+
+.login-form__user-radio {
+  display: none;
+}
+
+.login-form__user-radio-label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  margin-left: 36px;
+  padding-left: 29px;
+  color: $form-elemets-text-color;
+}
+
+.login-form__user-radio-label:first-of-type {
+  margin-left: 0;
+}
+
+.login-form__user-radio-label:before {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  background-color: #ffffff;
+  border: 6px solid #ffffff;
+  border-radius: 50%;
+}
+
+.login-form__user-radio:checked + .login-form__user-radio-label:before {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  background-color: $forest-green-light;
+  border: 6px solid #ffffff;
+  border-radius: 50%;
+}
+
+.login-form__user-radio:checked + .login-form__user-radio-label {
+  color: $forest-green-light;
+}
+
+.user-card-back__nav {
+  display: table;
+  width: 100%;
+}
+
+.user-card-back__nav-item {
+  position: relative;
+  display: table-cell;
+  width: 50%;
+  background-color: $forest-green-light;
+  &:hover {
+    background-color: $forest-green;
+  }
+  &:first-child {
+    border-bottom-left-radius: 6px;
+  }
+  &:last-child {
+    border-bottom-right-radius: 6px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: rgba(#ffffff, 0.5);
+  }
+  &:first-child:after {
+    display: none;
+
+  }
+  .link {
+    font-family: 'RobotoMedium', sans-serif;
+    color: #ffffff;
+    display: block;
+    line-height: 45px;
+  }
 }
 
 .welcome__user-card-front {
@@ -211,12 +386,12 @@
   }
 }
 
-.user-card__nav {
+.user-card-front__nav {
   display: table;
   width: 100%;
 }
 
-.user-card__nav-item {
+.user-card-front__nav-item {
   position: relative;
   display: table-cell;
   padding: 0 30px;
